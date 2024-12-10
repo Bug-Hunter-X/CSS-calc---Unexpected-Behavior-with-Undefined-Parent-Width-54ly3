@@ -1,0 +1,19 @@
+/* bug.css */
+.parent {
+  /* The width is not explicitly set, leading to unexpected behavior in calc() */
+}
+
+.child {
+  width: calc(100% - 10px);
+  background-color: lightblue;
+}
+
+/* bugSolution.css */
+.parent {
+  width: 300px; /* Explicitly set the parent's width */
+}
+
+.child {
+  width: calc(100% - 10px);
+  background-color: lightgreen; 
+} 
